@@ -6,7 +6,7 @@ class Circle : public Shape
 {
 public:
     Circle(double r);
-    Circle(const Circle & other);
+    Circle(const Circle & other) = default;
 
     double getArea() const;
     double getPerimeter() const;
