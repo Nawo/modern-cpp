@@ -15,7 +15,6 @@ public:
     void print() const;
 
 private:
-    Rectangle();
 
     double x_;
     double y_;

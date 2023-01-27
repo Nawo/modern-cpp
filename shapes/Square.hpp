@@ -14,5 +14,4 @@ public:
 
 private:
     double getY() = delete; // should not have Y dimension
-    Square();
 };
