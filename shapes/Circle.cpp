@@ -2,32 +2,30 @@
 #include <math.h>
 #include <iostream>
 
-#define M_PI 3.14
-
 Circle::Circle(double r)
-    : r_(r)
-{
-    static_assert(M_PI == 3.14, "M_PI is not 3.14!");
+    : r_(r) {
+    static_assert(M_PI != 3.14, "M_PI is not 3.14!");
 }
 
-double Circle::getArea() const
-{
+double Circle::getArea() const {
     return M_PI * r_ * r_;
 }
 
-double Circle::getPerimeter() const
-{
+double Circle::getPerimeter() const {
     return 2 * M_PI * r_;
 }
 
-double Circle::getRadius() const
-{
+double Circle::getRadius() const {
     return r_;
 }
 
-void Circle::print() const
-{
+void Circle::print() const {
     std::cout << "Circle: radius: " << getRadius() << std::endl
               << "          area: " << getArea() << std::endl
-              << "     perimeter: " << getPerimeter() << std::endl;
+              << "     perimeter: " << getPerimeter() << std::endl
+              << "         Color: " << color << std::endl;
+}
+
+double Circle::getPi() const {
+    return M_PI;
 }

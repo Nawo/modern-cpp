@@ -1,21 +1,25 @@
 #pragma once
+#include <iostream>
+#include <memory>
 
-enum class Color : unsigned char
-{
+enum class Color : unsigned char {
     RED,
     BLUE,
     GREEN
 };
 
-class Shape
-{
+std::ostream& operator<<(std::ostream& os, Color c);
 
-    Color color = Color::RED;
-
+class Shape {
 public:
-    virtual ~Shape() {}
+    Shape();
+    Shape(Color c);
+    virtual ~Shape();
 
     virtual double getArea() const = 0;
     virtual double getPerimeter() const = 0;
     virtual void print() const;
+
+public:
+    Color color = Color::RED;
 };
